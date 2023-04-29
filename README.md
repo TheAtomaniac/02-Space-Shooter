@@ -1,6 +1,4 @@
-# Exercise-02d-Menu-and-HUD
-
-Exercise for MSCH-C220
+# Project-02-2D-Arcade-Space-Shooter
 
 A basic space-shooter arcade game, created in Godot.
 
