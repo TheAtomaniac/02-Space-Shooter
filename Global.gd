@@ -3,8 +3,8 @@ extends Node
 var VP = null
 
 var score = 0
-var time = 30
-var lives = 5
+var time = 60
+var lives = 3
 
 func _ready():
 	randomize()
@@ -53,7 +53,7 @@ func update_score(s):
 
 func update_lives(l):
 	lives += l
-	if lives < 0:
+	if lives < 1:
 		var _scene = get_tree().change_scene("res://UI/End_Game.tscn")
 	else:
 		var HUD = get_node_or_null("/root/Game/UI/HUD")
@@ -63,5 +63,5 @@ func update_lives(l):
 
 func reset():
 	score = 0
-	time = 30
-	lives = 5
+	time = 60
+	lives = 3

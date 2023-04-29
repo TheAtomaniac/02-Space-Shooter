@@ -2,11 +2,11 @@ extends KinematicBody2D
 
 var y_positions = [100,150,200,500,550]
 var initial_position = Vector2.ZERO
-var direction = Vector2(1.5,0)
+var direction = Vector2(.3,0)
 var wobble = 30.0
 
 
-var health = 1
+var health = 25
 
 var Effects = null
 onready var Bullet = load("res://Enemy/Bullet.tscn")
@@ -26,7 +26,7 @@ func _physics_process(_delta):
 func damage(d):
 	health -= d
 	if health <= 0:
-		Global.update_score(200)
+		Global.update_score(500)
 		Effects = get_node_or_null("/root/Game/Effects")
 		if Effects != null:
 			var explosion = Explosion.instance()
